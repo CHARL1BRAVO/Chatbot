@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block body %}
+<br>
+<br>
+<br>
+  <div class="card custom">
+    <div class="inner">
+      <h1>Login</h1>
+      <br>
+      <hr>
+      <br>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <br>
+      <br>
+      <br>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Forgot Passward</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              I’m so sorry for your loss. This must be incredibly difficult for you.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" data-bs-dismiss="modal" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="d-grid gap-2 LoginBtn">
+        <button class="btn btn-primary me-md-2" type="button">Login</button>
+      </div>
+        <p class="RegisterLoginTextBox">Don't have an account? <a href="/register">Register</a> 
+          <br>
+        <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="/register">Forgot Password</a>
+        </p>
+    </div>
+  </div>
+{% endblock %}
+    

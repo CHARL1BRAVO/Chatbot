@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+  <div class="MainTitle">What can we help you find?</div>
+  <div id="container">
+    <div class="textbox" id="input" contenteditable="true" onkeydown="handleKeyPress(event)"></div>
+    <input type="text" id="hiddenInput">
+  </div>
+
+  <div class="wrapper" onclick="toggleDiv()">
+    <a class="submit" href="#"><span>SUBMIT</span></a>
+  </div>
+
+  <div id="myDiv" class="hiddenText">
+    <div class="ReplyMessage" role="alert">
+      <p>Thank you for your question. I appreciate your inquiry and am happy to provide information or assistance to the best of my ability. If you have any specific details or additional context to share, it would help me offer a more tailored response. Feel free to ask anything, and I'll do my best to assist you..</p>
+    </div>
+  </div>
+  
+  <script>
+    function toggleDiv() {
+        var div = document.getElementById('myDiv');
+        div.classList.toggle('hidden');
+    }
+
+    // Invoking toggleDiv() to hide myDiv initially
+    toggleDiv();
+
+    function toggleDiv() {
+        var div = document.getElementById('myDiv');
+        div.classList.toggle('hidden');
+    }
+  </script>
+{% endblock %}

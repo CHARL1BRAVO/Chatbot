@@ -1,0 +1,94 @@
+<html>
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat bot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <script src="{% static 'script.js' %}"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <img class="logo" src="static/images/chat-bot.png" alt="ChatBot logo">
+        <a class="TitleLogo">ChatBot</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'register' %}">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            
+            <input type="checkbox" id="menyAvPaa">
+            <label id="burger" for="menyAvPaa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <nav id="meny">
+              <div class="Hamoptions">
+                <br>
+                <a class="Hamoption" href="{% url 'home' %}">Home</a>
+                <br>
+                <a class="Hamoption" href="{% url 'login' %}">Login</a>
+                <br>
+                <a class="Hamoption" href="{% url 'register' %}">Register</a>
+                <br>
+                <a class="Hamoption" href="{% url 'about_us' %}">About Us</a>
+              </div>
+            </nav>
+          </span>
+        </div>
+      </div>
+    </nav>
+  <br>
+
+  {% block body %}
+  {% endblock %}
+</body>
+  <footer class="footer">
+    <div class="footer-basic">
+          <div class="social">
+            <i class="icon ion-social-instagram"></i>
+            <i class="icon ion-social-snapchat"></i>
+            <i class="icon ion-social-twitter"></i>
+            <i class="icon ion-social-facebook"></i>
+          </div>
+          <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Home</a></li>
+              <li class="list-inline-item"><a href="#">Services</a></li>
+              <li class="list-inline-item"><a href="#">About</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+    </ul>
+    <p class="copyright">Company Name © 2018</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+  </footer>
+
+</html>
